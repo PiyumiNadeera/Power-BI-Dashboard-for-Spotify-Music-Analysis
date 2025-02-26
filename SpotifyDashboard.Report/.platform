@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SpotifyDashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a75f15c8-684b-4d25-b0a4-b60d9f3eb10a"
+  }
+}

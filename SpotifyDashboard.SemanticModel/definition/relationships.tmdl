@@ -1,0 +1,4 @@
+relationship df6087da-dbdf-8ec7-c776-c268c2bffeb2
+	fromColumn: 'Spotify Dataset'.Date
+	toColumn: Calender.Date
+

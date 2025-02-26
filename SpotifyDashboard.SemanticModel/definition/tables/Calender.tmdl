@@ -1,0 +1,84 @@
+table Calender
+	lineageTag: ac8bb2c0-60f2-4415-aef7-5515a18ac0ac
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: dd/mm/yyyy
+		lineageTag: 358e51cb-bd84-4d37-9ef6-145b48b83918
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Year
+		formatString: 0
+		lineageTag: 25e02514-05c7-4bff-91d5-b6857b0d6963
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		formatString: 0
+		lineageTag: 07c2738b-ac61-47be-a857-b78d0cc37588
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter (Q)'
+		lineageTag: 7622d9d7-8aa1-40a0-a139-3677b5b977bd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter (Q)]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		formatString: 0
+		lineageTag: 774adeb5-68f0-4aa1-a08c-d50a054682db
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		lineageTag: b4928aa6-8329-4f56-bfae-39b6978f5fb2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthName]
+		sortByColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of week'
+		formatString: 0
+		lineageTag: 5fe0f9f8-b232-4a4a-b9e5-5e5375773cc6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day of week]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		lineageTag: 81697f58-c7d2-4bc8-bff4-c0f6da76f848
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DayName]
+		sortByColumn: 'Day of week'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calender = calculated
+		mode: import
+		source = ADDCOLUMNS(CALENDAR(MIN('Spotify Dataset'[Date]),MAX('Spotify Dataset'[Date])),"Year",YEAR([Date]),"Quarter",QUARTER([Date]),"Quarter (Q)",FORMAT([Date],"\QQ"),"Month",MONTH([Date]),"MonthName",FORMAT([Date],"mmmm"),"Day of week",WEEKDAY([Date]),"DayName",FORMAT([Date],"ddd"))
+
+	annotation PBI_Id = e8e26d269c4441dfa19ddf64cc58462d
+
