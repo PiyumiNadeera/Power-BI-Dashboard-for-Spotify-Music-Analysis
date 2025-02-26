@@ -15,7 +15,7 @@ This repository contains a Power BI Dashboard for Spotify Music Analysis (2023).
 - **Spotify Dataset (2023)** - Source data containing track details, streams, and popularity metrics.
 - **Excel/CSV** - Data preprocessing and structuring before importing into Power BI.
 
-![Spotify Analysis Dashboard](spotifyDashboard.png)
+![Spotify Analysis Dashboard](Assests/spotifyDashboard.png)
 
 ## How to Use
 
