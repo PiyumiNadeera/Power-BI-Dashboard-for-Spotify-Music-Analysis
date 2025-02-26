@@ -3,26 +3,25 @@ This repository contains a Power BI Dashboard for Spotify Music Analysis (2023).
 
 ## Features
 
-- **Sales Performance Overview**: Visualizes overall sales data with key metrics like revenue and growth trends.
-- **Product and Category Analysis**: Displays insights into the best and worst performing products.
-- **Regional Sales**: Breaks down sales performance by region to identify areas for growth.
-- **Time-Based Trends**: Analyzes sales over time, including monthly and yearly comparisons.
-- **Interactive Filters**: Provides interactive filters for users to explore data by product, region and time period.
-  
+- **Top Tracks & Artists** - Displays the most streamed tracks along with their respective artists.
+- **Total Streams Analysis** - Visualizes the total number of streams per track.
+- **Most Popular Tracks** - Identifies the highest-ranked songs based on popularity.
+- **Release Date Insights** - Shows the distribution of songs by release year.
+- **Interactive Filtering** - Allows dynamic filtering to explore specific artists, tracks, or time periods.
 
-![Sales Insight Dashboard](Assets/Dashboard.png)
+## Tools Used
 
-## Prerequisites
+- **Power BI** - For data visualization and dashboard creation.
+- **Spotify Dataset (2023)** - Source data containing track details, streams, and popularity metrics.
+- **Excel/CSV** - Data preprocessing and structuring before importing into Power BI.
 
-To view and interact with the dashboard, you will need the following:
-- Power BI Desktop (or Power BI Service)
-- A dataset containing sales data 
+![Spotify Analysis Dashboard](spotifyDashboard.png)
 
 ## How to Use
 
 1. **Clone this repository**:
    ```bash
-   https://github.com/PiyumiNadeera/Power-BI-Dashboard-for-Sales-Insights.git
+   git clone https://github.com/PiyumiNadeera/Power-BI-Dashboard-for-Spotify-Music-Analysis.git
 
 2. **Open the Power BI file:**
    
@@ -36,8 +35,7 @@ Import your sales data to populate the dashboard.
 
 4. **Explore the dashboard:**
 
-Use the interactive filters to view different metrics based on product, region and time period.
-Review the visualizations for insights into sales performance, trends, and product analysis.
+Use the interactive filters to view different metrics based on tracks, streams and artists.
 
 ## Contact
 For any questions or feedback, feel free to reach out to:
